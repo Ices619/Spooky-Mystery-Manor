@@ -35,7 +35,7 @@ public class DoorCellOpen : MonoBehaviour
                 this.GetComponent<BoxCollider>().enabled = false;
                 ActionDisplay.SetActive(false);
                 ActionText.SetActive(false);
-                Door.GetComponent<Animation>().Play("FirstDoorOpenAnim");
+                Door.GetComponent<Animation>().Play("DoorOpen");
                 CreakSound.Play();
             }
         }
