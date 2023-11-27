@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoorCellOpen : MonoBehaviour
+public class PickUpPistol : MonoBehaviour
 {
     public float TheDistance;
     public GameObject ActionDisplay;
-    public GameObject ActionText;
-    public GameObject Door;
-    public AudioSource CreakSound;
+    public GameObject ActionTextPistol;
+    public GameObject FakePistol;
+    public GameObject RealPistol;
+    public GameObject GuideArrow;
     public GameObject ExtraCross;
    
 
     private void Start()
     {
         ExtraCross.SetActive(false);
+        ActionTextPistol.GetComponent<Text>().text = "Pick up Pistol";
         ActionDisplay.SetActive(false);
-        ActionText.SetActive(false);
+        ActionTextPistol.SetActive(false);
     }
     void Update()
     {
@@ -30,7 +32,7 @@ public class DoorCellOpen : MonoBehaviour
         {
             ExtraCross.SetActive(true);
             ActionDisplay.SetActive(true);
-            ActionText.SetActive(true);
+            ActionTextPistol.SetActive(true);
         }
         if (Input.GetButtonDown("Action"))
         {
@@ -38,9 +40,12 @@ public class DoorCellOpen : MonoBehaviour
             {
                 this.GetComponent<BoxCollider>().enabled = false;
                 ActionDisplay.SetActive(false);
-                ActionText.SetActive(false);
-                Door.GetComponent<Animation>().Play("DoorOpen");
-                CreakSound.Play();
+                ActionTextPistol.SetActive(false);
+                FakePistol.SetActive(false);
+                RealPistol.SetActive(true);
+                ExtraCross.SetActive(false);
+                GuideArrow.SetActive(false);
+        
             }
         }
     }
@@ -49,6 +54,6 @@ public class DoorCellOpen : MonoBehaviour
     {
         ExtraCross.SetActive(false);
         ActionDisplay.SetActive(false);
-        ActionText.SetActive(false); 
+        ActionTextPistol.SetActive(false); 
     }
 }
