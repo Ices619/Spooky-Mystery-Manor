@@ -30,9 +30,10 @@ public class ExtendedFlycam : MonoBehaviour
 	private float rotationX = 0.0f;
 	private float rotationY = 0.0f;
 
-	void Start ()
+    [System.Obsolete]
+    void Start ()
 	{
-		Screen.lockCursor = true;
+        Screen.lockCursor = true;
 	}
 
 	void Update ()

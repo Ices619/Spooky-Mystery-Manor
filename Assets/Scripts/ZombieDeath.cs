@@ -5,17 +5,24 @@ using UnityEngine;
 
 public class ZombieDeath : MonoBehaviour
 {
-    public GameObject Target;
-    public float speed = 0.5f;
-    void Start()
+    public int EnemyHealth = 20;
+    public GameObject TheEnemy;
+    public int StatusCheck;
+
+    void DamageZombie(int DamageAmount)
     {
-        
+        EnemyHealth -= DamageAmount;
+
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
-        transform.LookAt(Target.transform.position);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+       if (EnemyHealth <= 0 && StatusCheck == 0)
+        {
+            StatusCheck = 2;
+            TheEnemy.GetComponent<Animation>().Stop("Z_Walk 1");
+            TheEnemy.GetComponent<Animation>().Play("Z_FallingBack 1");
+        }
     }
 }
