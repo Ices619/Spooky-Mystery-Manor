@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public Transform FirePlace;
     public float BulletForce;
 
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -22,7 +22,9 @@ public class Bullet : MonoBehaviour
         GameObject Bullet = Instantiate(BulletPrefab, FirePlace.position, FirePlace.rotation);
         Rigidbody rb = Bullet.GetComponent<Rigidbody>();
         rb.AddForce(FirePlace.forward * BulletForce, ForceMode.Impulse);
-        Destroy(Bullet,3f);
+        Destroy(Bullet, 3f);
+
+
     }
 
 

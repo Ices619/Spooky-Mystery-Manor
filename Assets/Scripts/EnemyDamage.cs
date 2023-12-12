@@ -28,7 +28,6 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerHealth.TakeDamage(damage);
-            Zombie.GetComponent<Animation>().Play("Z_Attack 1");
             Hurt.Play();
         }
     }

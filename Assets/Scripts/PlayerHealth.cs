@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public int MaxHealth = 10;
+    public GameObject FirstPersonController;
 
     //public Renderer PlayerSR;
     //public FirstPersonMovement playerMovement;
-    //public FirstPersonMovement playerMovement;
+
     void Start()
     {
         health = MaxHealth;
@@ -27,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
             //playerMovement.enabled = false;
             //Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
+            FirstPersonController.SetActive(false);
         }
     }
 }

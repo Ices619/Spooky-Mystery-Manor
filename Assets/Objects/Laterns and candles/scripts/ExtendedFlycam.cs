@@ -36,7 +36,8 @@ public class ExtendedFlycam : MonoBehaviour
         Screen.lockCursor = true;
 	}
 
-	void Update ()
+    [System.Obsolete]
+    void Update ()
 	{
 		rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
 		rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
@@ -67,7 +68,7 @@ public class ExtendedFlycam : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.End))
 		{
-			Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
+            Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
 		}
 	}
 }
