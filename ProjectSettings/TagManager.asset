@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Zombie
   - Bullet
+  - Coin
   layers:
   - Default
   - TransparentFX

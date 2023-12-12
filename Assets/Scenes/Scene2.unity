@@ -36835,7 +36835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933b6105ec1bedc47b3ff0edcd9a02d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scenename: Winner
+  Scenename: WinnerNew
 --- !u!65 &2023859842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37275,6 +37275,22 @@ PrefabInstance:
       propertyPath: simulationSpeed
       value: 1.02
       objectReference: {fileID: 0}
+    - target: {fileID: 1732108289277101534, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732108289277101534, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732108289277101534, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732108289277101534, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2997066896930677137, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -78.48
@@ -37285,7 +37301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2997066896930677137, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -106.52
+      value: -104.97
       objectReference: {fileID: 0}
     - target: {fileID: 2997066896930677137, guid: aa0158f683ecc7a4a830e5cff626621f, type: 3}
       propertyPath: m_LocalRotation.w

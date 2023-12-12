@@ -16,15 +16,15 @@ public class BulletHit : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
 
 
         //These are the GameObjects with these certain tags will be destroyed and add a point to the score system
-        if (collision.gameObject.tag =="Zombie")
+        if (col.gameObject.tag == "Zombie")
         {
             Debug.Log("Collision");
-            Destroy(collision.gameObject);
+            Destroy(col.gameObject);
             GameObject.Find("GameStateManager").GetComponent<GameStateManager>().adjustScore(1);
             Destroy(this.gameObject);
         }

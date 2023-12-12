@@ -19,6 +19,6 @@ public class Score : MonoBehaviour
     void Update()
     {
         //Displays the score
-        scoreText.text = "Score: " + gsm.getScore();
+        scoreText.text = "Score: " + gsm.GetScore();
     }
 }

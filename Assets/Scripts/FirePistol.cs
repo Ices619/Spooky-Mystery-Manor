@@ -24,17 +24,18 @@ public class FirePistol : MonoBehaviour
                 StartCoroutine(FiringPistol());
             }
         }
+
     }
 
     IEnumerator FiringPistol()
     {
-        RaycastHit Shot;
+        //RaycastHit Shot;
         IsFiring = true;
-        if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), out Shot))
-        {
-            TargetDistance = Shot.distance;
-            Shot.transform.SendMessage("DamageZombie", DamageAmount, SendMessageOptions.DontRequireReceiver);
-        }
+        //if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), out Shot))
+        //{
+            //TargetDistance = Shot.distance;
+            //Shot.transform.SendMessage("DamageZombie", DamageAmount, SendMessageOptions.DontRequireReceiver);
+        //}
         TheGun.GetComponent<Animation>().Play("PistolShot");
         MuzzleFlash.SetActive(true);
         MuzzleFlash.GetComponent<Animation>().Play("MuzzleAnim");

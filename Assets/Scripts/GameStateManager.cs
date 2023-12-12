@@ -9,12 +9,13 @@ public class GameStateManager : MonoBehaviour
     public int howMany;
     private int score;
 
-    public int getScore()
+
+    public int GetScore()
     {
         return score;
     }
 
-    public void setScore(int s)
+    public void SetScore(int s)
     {
         score = s;
     }
