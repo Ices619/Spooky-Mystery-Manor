@@ -444,7 +444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  MaxHealth: 4
+  MaxHealth: 5
+  FirstPersonController: {fileID: 0}
 --- !u!1 &2728161772989174440
 GameObject:
   m_ObjectHideFlags: 0

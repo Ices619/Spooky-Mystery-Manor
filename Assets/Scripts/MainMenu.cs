@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+
+        Cursor.visible = true;
+
+        Time.timeScale = 1.0f;
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(1);

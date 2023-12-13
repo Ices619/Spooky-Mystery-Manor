@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
             //playerMovement.enabled = false;
             //Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
-            FirstPersonController.SetActive(false);
+            FirstPersonController.SetActive(true);
         }
     }
 }

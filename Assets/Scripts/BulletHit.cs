@@ -21,7 +21,7 @@ public class BulletHit : MonoBehaviour
 
 
         //These are the GameObjects with these certain tags will be destroyed and add a point to the score system
-        if (col.gameObject.tag == "Zombie")
+        if (col.gameObject.CompareTag("Zombie"))
         {
             Debug.Log("Collision");
             Destroy(col.gameObject);
