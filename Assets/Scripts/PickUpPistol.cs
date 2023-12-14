@@ -14,7 +14,7 @@ public class PickUpPistol : MonoBehaviour
     public GameObject ExtraCross;
     public GameObject TheJumpTrigger;
    
-
+    //Markers are off from start
     private void Start()
     {
         ExtraCross.SetActive(false);
@@ -22,11 +22,14 @@ public class PickUpPistol : MonoBehaviour
         ActionDisplay.SetActive(false);
         ActionTextPistol.SetActive(false);
     }
+
+    //Player casting updates overtime
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
     }
 
+    //If mouse hovers over pistol then markers appear
     private void OnMouseOver()
     {
         if (TheDistance <= 3)
@@ -51,6 +54,7 @@ public class PickUpPistol : MonoBehaviour
         }
     }
 
+    //Markers disappear when mouse is away from pistol object
     private void OnMouseExit()
     {
         ExtraCross.SetActive(false);

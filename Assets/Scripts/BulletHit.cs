@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletHit : MonoBehaviour
 {
+    //called upon as a rigid body component in script
     public Rigidbody r;
     void Start()
     {

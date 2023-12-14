@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    //These are all scenes that are loadable
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -30,5 +31,10 @@ public class MainMenu : MonoBehaviour
     public void Mainmenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void second()
+    {
+        SceneManager.LoadScene(2);
     }
 }

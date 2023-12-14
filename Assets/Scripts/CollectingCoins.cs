@@ -14,7 +14,7 @@ public class CollectingCoins : MonoBehaviour
     }
 
  
-
+    // Increses score by one for each collision the player does
     public void OnTriggerEnter(Collider Col)
     {
         if (Col.gameObject.tag == "Coin")
@@ -24,7 +24,7 @@ public class CollectingCoins : MonoBehaviour
             GameObject.Find("GameStateManager").GetComponent<GameStateManager>().adjustScore(1);
             Col.gameObject.SetActive(false);
             Ching.Play();
-            //Destroy(Col.gameObject);
+            
             
         }
         

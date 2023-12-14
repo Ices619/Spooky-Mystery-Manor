@@ -11,23 +11,18 @@ public class PlayerHealth : MonoBehaviour
     public int MaxHealth = 10;
     public GameObject FirstPersonController;
 
-    //public Renderer PlayerSR;
-    //public FirstPersonMovement playerMovement;
-
+    //Health starts the same as MaxHealth
     void Start()
     {
         health = MaxHealth;
     }
 
-    // Update is called once per frame
+    // if health reaches zero then game over screen plays and player controller is disabled
     public void TakeDamage(int amount)
     {
         health -= amount;
         if (health <= 0)
         {
-            //PlayerSR.enabled = false;
-            //playerMovement.enabled = false;
-            //Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
             FirstPersonController.SetActive(true);
         }

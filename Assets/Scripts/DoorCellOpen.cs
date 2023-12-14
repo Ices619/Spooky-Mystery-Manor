@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DoorCellOpen : MonoBehaviour
 {
+
+    
     public float TheDistance;
     public GameObject ActionDisplay;
     public GameObject ActionText;
@@ -12,18 +14,21 @@ public class DoorCellOpen : MonoBehaviour
     public AudioSource CreakSound;
     public GameObject ExtraCross;
    
-
+    //Markers set false
     private void Start()
     {
         ExtraCross.SetActive(false);
         ActionDisplay.SetActive(false);
         ActionText.SetActive(false);
     }
+
+    //Distance variable as playercasting
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
     }
 
+    //Markers will display
     private void OnMouseOver()
     {
         if (TheDistance <= 3)
@@ -45,6 +50,7 @@ public class DoorCellOpen : MonoBehaviour
         }
     }
 
+    //Markers will Hide
     private void OnMouseExit()
     {
         ExtraCross.SetActive(false);

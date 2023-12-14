@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-
+    //Health is int
     public int health;
     public int maxHealth;
-
+    //Sprite images for HP
     public Sprite emptyHeart;
     public Sprite fullHeart;
     public Image[] hearts;
 
+    //Call script PlayerHealth
     public PlayerHealth playerHealth;
-    // Start is called before the first frame update
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    // Updates on health display
     void Update()
     {
 

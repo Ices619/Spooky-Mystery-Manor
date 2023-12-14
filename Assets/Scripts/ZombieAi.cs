@@ -8,13 +8,13 @@ public class ZombieAi : MonoBehaviour
     public float speed = 0.1f;
     public 
 
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    // Follows the object inputted in inspector
     void Update()
     {
         transform.LookAt(Target.gameObject.transform);
